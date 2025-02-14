@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Persik_Chat_Description.md = Persik_Chat_Description.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP_Server", "TCP_Server\TCP_Server.csproj", "{A50FD8D5-015B-4F2D-89BB-1815F982DB3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{90087C0C-50C8-4A19-B93D-8E855D966711}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90087C0C-50C8-4A19-B93D-8E855D966711}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90087C0C-50C8-4A19-B93D-8E855D966711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A50FD8D5-015B-4F2D-89BB-1815F982DB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50FD8D5-015B-4F2D-89BB-1815F982DB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50FD8D5-015B-4F2D-89BB-1815F982DB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A50FD8D5-015B-4F2D-89BB-1815F982DB3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
