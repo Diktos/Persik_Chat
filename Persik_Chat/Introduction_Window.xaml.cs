@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Persik_Chat
 {
-    /// <summary>
-    /// Interaction logic for Introduction_Window.xaml
-    /// </summary>
     public partial class Introduction_Window : UserControl
     {
         public Introduction_Window()

@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Collections.ObjectModel;
+using sabatex.Extensions;
 
 
 namespace Persik_Chat_Classes
 {
-    public class User:NotifyPropertyChanged
+    public class User:ObservableObject
     {
         private string userName = "Default";
         private string lastName = string.Empty;
@@ -22,7 +23,6 @@ namespace Persik_Chat_Classes
         private string email = string.Empty;
 
         private Dictionary<User,Chat> chats = new Dictionary<User, Chat>();
-
 
         public User(string userName, string lastName, string login, string password, DateTime dateOfBirth,
                Status status, string avatarPath, DateTime lastSeen, string email)
@@ -42,17 +42,58 @@ namespace Persik_Chat_Classes
 
         #region NotifyingProperties
 
-        public string UserName 
+        public string UserName
         {
-            get { return userName; }
-            set
-            {
-                if (userName != value)
-                {
-                    userName = value;
-                    OnPropertyChanged(nameof(UserName));
-                }
-            }
+            get => userName;
+            set => SetProperty(ref userName, value);
+        }
+
+        public string LastName
+        {
+            get => lastName;
+            set => SetProperty(ref lastName, value);
+        }
+
+        public string Login
+        {
+            get => login;
+            set => SetProperty(ref login, value);
+        }
+
+        public string Password
+        {
+            get => password;
+            set => SetProperty(ref password, value);
+        }
+
+        public DateTime DateOfBirth
+        {
+            get => dateOfBirth;
+            set => SetProperty(ref dateOfBirth, value);
+        }
+
+        public Status Status
+        {
+            get => status;
+            set => SetProperty(ref status, value);
+        }
+
+        public string AvatarPath
+        {
+            get => avatarPath;
+            set => SetProperty(ref avatarPath, value);
+        }
+
+        public DateTime LastSeen
+        {
+            get => lastSeen;
+            set => SetProperty(ref lastSeen, value);
+        }
+
+        public string Email
+        {
+            get => email;
+            set => SetProperty(ref email, value);
         }
 
         #endregion

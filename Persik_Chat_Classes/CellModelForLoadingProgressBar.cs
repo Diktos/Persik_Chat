@@ -13,10 +13,12 @@ namespace Persik_Chat_Classes
     {
         private bool _isFilled;
 
+        #region NotifyingProperties
         public bool IsFilled
         {
             get => _isFilled;
             set => SetProperty(ref _isFilled, value);
         }
+        #endregion 
     }
 }

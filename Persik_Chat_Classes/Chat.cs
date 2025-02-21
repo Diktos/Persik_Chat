@@ -11,10 +11,11 @@ namespace Persik_Chat_Classes
     public class Chat:ObservableObject
     {
         private User user1;
-        private User user2;
-        private ObservableCollection<Message> messages = new ObservableCollection<Message>();
+        private User user2;  
         private DateTime lastActivity = DateTime.Now;
 
+        private ObservableCollection<Message> messages = new ObservableCollection<Message>();
+      
         public Chat(User user1, User user2)
         {
             this.user1 = user1;
@@ -24,6 +25,7 @@ namespace Persik_Chat_Classes
 
         public Chat() { }
 
+        #region NotifyingProperties
         public User User1
         {
             get => user1;
@@ -36,16 +38,11 @@ namespace Persik_Chat_Classes
             set => SetProperty(ref user2, value);
         }
 
-        public ObservableCollection<Message> Messages
-        {
-            get => messages;
-            set => SetProperty(ref messages, value);
-        }
-
         public DateTime LastActivity
         {
             get => lastActivity;
             set => SetProperty(ref lastActivity, value);
         }
+        #endregion
     }
 }
