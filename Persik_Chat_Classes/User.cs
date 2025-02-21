@@ -17,8 +17,7 @@ namespace Persik_Chat_Classes
         private string password = "123";
         private DateTime dateOfBirth = DateTime.Parse("01.01.2020");
         private Status status = Status.Offline;
-        private string avatarPath = string.Empty;
-        //private Image avatar = null; ------ Можна зберігати шлях, якщо імедж тіки у ВПФ файлі
+        private string avatarPath = string.Empty; // byte[] for photo
         private DateTime lastSeen = DateTime.Now;
         private string email = string.Empty;
 
@@ -41,6 +40,23 @@ namespace Persik_Chat_Classes
 
         public User() { }
 
+        #region NotifyingProperties
+
+        public string UserName 
+        {
+            get { return userName; }
+            set
+            {
+                if (userName != value)
+                {
+                    userName = value;
+                    OnPropertyChanged(nameof(UserName));
+                }
+            }
+        }
+
+        #endregion
+
     }
 
     public enum Status
@@ -49,23 +65,6 @@ namespace Persik_Chat_Classes
         Busy,
         Offline
     }
-
-    #region NotifyingProperties
-
-    //public string UserName ------- так не можна, треба тільки у ВПФ середовищі?
-    //{
-    //    get { return userName; }
-    //    set
-    //    {
-    //        if (userName != value)
-    //        {
-    //            userName = value;
-    //            UserName(nameof(UserName));
-    //        }
-    //    }
-    //}
-
-    #endregion
 }
 // Коли користувач робить пошук користувача за логіном у месенджері він робить запит до сервера коли пише логін, на сервер
 // і цей запит приймається і відправляється відповідь через метод потрібний набір користувачів які співпадають за логіном

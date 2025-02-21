@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Persik_Chat.AuthSignUpControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Persik_Chat"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="400"
+             Background="White"
+             >
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <TextBlock Text="Вітаємо у Persik_Chat!" 
+                       FontSize="18" FontWeight="Bold" 
+                       TextAlignment="Center" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Давай реєструватися!" 
+                       FontSize="14" TextAlignment="Center" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Введи свій логін:" FontSize="14"/>
+            <TextBox Height="30" BorderThickness="2" BorderBrush="Black"/>
+
+            <TextBlock Text="Якщо логін зайнятий" FontSize="12" Foreground="Red" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Введи свій пароль (не забудь його десь зберегти):" FontSize="13"/>
+            <PasswordBox Height="30" BorderThickness="2" BorderBrush="Black"/>
+
+            <TextBlock Text="Якщо пароль не введено" FontSize="12" Foreground="Red" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Введи ще раз свій пароль для підтвердження:" FontSize="14"/>
+            <PasswordBox Height="30" BorderThickness="2" BorderBrush="Black"/>
+
+            <TextBlock Text="Якщо паролі відрізняються" FontSize="12" Foreground="Red" Margin="0,5,0,20"/>
+
+            <Button Content="Продовжити" 
+                    Background="Black" Foreground="White" 
+                    FontSize="14" Padding="10" Width="250" Margin="0,0,0,10"/>
+
+            <Button Content="Повернутися назад" 
+                    Background="Black" Foreground="White" 
+                    FontSize="14" Padding="10" Width="250"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:local="clr-namespace:Persik_Chat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="1000">
+        Title="Persik_Chat" Height="650" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        >
     <Grid>
-        <!--xmlns:local="clr-namespace:Persik_Chat;assembly=Persik_Chat" у Window-->
-        <!--<local:Introduction_Window Visibility="Visible" />-->
-        
+        <local:Introduction_Window Visibility="Visible" />
+        <local:Input_Selection Visibility="Collapsed" />
+        <local:AuthSignUpControl Visibility="Collapsed" />
+        <local:SignUpDetailsControl Visibility="Visible" />
+        <local:AuthLoginControl Visibility="Visible" />
     </Grid>
 </Window>
